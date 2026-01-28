@@ -11,20 +11,26 @@
 - Server :  responds (never initiates communication)
 
 # HTTP Request V/s HTTP Response
--               Request                                     Response
-1. Method: get, put                                        http/1.1 200 ok
-2. Host : example.com (Server domain)                      Date:
-3. User-agent : browser Name                               Content-type: application/json
-4. Content-type: Application/json(Format of request body)                          
-5. Content-length: 123                                     Content-length: 123
-6. Authorisation: Bearer djsbdbsjdsdj                      Serevr:Apache/2.2.3 (ubuntu)
-7. Accept: application/json                                Cache-Control: no-store
-8. Accept-Encoding: gzip, deflate,br                       X-Request-ID: abcdef12345
-9. Connection: keep-alive                                  Strict-Transport-Security:max-age=310202 
-10. Referer: Https/example.con/dashboard                   includeSubDomains:preload
-11. Cookies: sessionId=abshsbsjsj ; lang=en-us             Set-Cookies:sessionID=abcd123, path=/,secure;HttpOnly
-                                                           Vary:Accept-Encoding
-                                                           Conection:Keep-alive
+
+
+# 📌 Comparison Table
+
+| **HTTP Request**                                      | **HTTP Response** |
+|-------------------------------------------------------|-------------------|
+| **Method:** GET, POST, PUT                            | **Status Line:** `HTTP/1.1 200 OK` |
+| **Host:** example.com (Server domain)                 | **Date:** `<server-date>` |
+| **User-Agent:** Browser name                          | **Content-Type:** application/json |
+| **Content-Type:** application/json (request body format) | **Content-Length:** 123 |
+| **Content-Length:** 123                               | **Server:** Apache/2.2.3 (Ubuntu) |
+| **Authorization:** Bearer djsbdbsjdsdj                | **Cache-Control:** no-store |
+| **Accept:** application/json                          | **X-Request-ID:** abcdef12345 |
+| **Accept-Encoding:** gzip, deflate, br                | **Strict-Transport-Security:** max-age=310202; includeSubDomains; preload |
+| **Connection:** keep-alive                            | **Set-Cookie:** sessionID=abcd123; Path=/; Secure; HttpOnly |
+| **Referer:** https://example.com/dashboard            | **Vary:** Accept-Encoding |
+| **Cookies:** sessionId=abshsbsjsj; lang=en-us         | **Connection:** keep-alive |
+
+
+
 
 // Request Body:                                           Response Body:
 {                                                          {
